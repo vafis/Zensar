@@ -1,0 +1,30 @@
+﻿<div class="panel-body">
+    <div class="row">
+        <form role="form" novalidate angular-validator name="addPersonForm" angular-validator-submit="Register()">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="newPerson.FirstName" name="firstName" id="firstName" placeholder="First Name"
+                               validate-on="blur" required required-message="'First Name is required'">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="newPerson.Surname" name="Surname" id="Surname" placeholder="Surname"
+                               validate-on="blur" required required-message="'Surname is required'">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Phone">Phone</label>
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="newPerson.Phone" id="Phone" name="Phone" placeholder="Phone"
+                               validate-on="blur" required required-message="'Phone is required'">
+                    </div>
+                </div>
+                <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+            </div>
+        </form>
+    </div>
+</div>

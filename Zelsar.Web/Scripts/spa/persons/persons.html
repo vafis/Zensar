@@ -1,0 +1,16 @@
+﻿
+
+<div id= "main-region" class="container">
+    <table class="table table-hover" style="padding: 2px">
+        <tr ng-repeat="x in persons" data-ng-click="openEditDialog(x)">
+            <td>{{ x.Id }}</td>
+            <td>{{ x.FirstName }}</td>
+            <td>{{ x.Surname }}</td>
+            <td>{{ x.Phone }}</td>
+            <td>{{ x.Active }}</td>
+            <td>
+                <div><button class="btn btn-small js-edit" ng-click="openEditDialog(x);">Edit<i class="icon-pencil"></i> </button></div>
+            </td>
+        </tr>
+    </table>
+</div>

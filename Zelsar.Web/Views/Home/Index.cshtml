@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+
+<h2>Zelsar App</h2>
+
+<!DOCTYPE html>
+<html ng-app="homeZelsar">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home </title>
+    @Styles.Render("~/Content") 
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body ng-controller="rootCtrl">
+    <div>
+        <side-bar></side-bar>
+        <div>
+            <div ng-view></div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/vendors")
+    @Scripts.Render("~/bundles/spa")
+</body>
+</html>

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/jasmine.css" rel="stylesheet" />
+    <script type="text/javascript" src="scripts/jasmine.js"></script>
+    <script type="text/javascript" src="scripts/jasmine-html.js" ></script>
+    <script type="text/javascript" src="scripts/sinon-1.9.1.js"></script>
+    
+
+
+    <script type="text/javascript" src="../Zelsar.Web/Scripts/vendors/angular.js"></script>
+    <script src="scripts/angular-resource.js"></script>
+    <script type="text/javascript" src="../Zelsar.Web/Scripts/vendors/angular-route.js"></script>
+    <script type="text/javascript" src="scripts/angular-mocks.js"></script>
+
+    <script src="../Zelsar.Web/Scripts/spa/modules/common.core.js"></script>
+    <script src="../Zelsar.Web/Scripts/spa/modules/common.ui.js"></script>
+    <script type="text/javascript" src="../Zelsar.Web/Scripts/spa/app.js"></script>
+    <script type="text/javascript" src="../Zelsar.Web/Scripts/spa/persons/personsCtrl.js"></script>
+    <script type="text/javascript" src="../Zelsar.Web/Scripts/spa/services/apiService.js"></script>
+
+
+   
+    <script src="scripts/personsctrl-tests.js"></script>
+
+    <script type="text/javascript">
+
+        (function () {
+            debugger;
+            var jasmineEnv = jasmine.getEnv();
+            var htmlReporter = new jasmine.TrivialReporter();
+            jasmineEnv.addReporter(htmlReporter);
+
+           jasmineEnv.specFilter = function (spec) {
+                return htmlReporter.specFilter(spec);
+           }
+
+           var currentWindowOnload = window.onload;
+
+           window.onload = function () {
+               if (currentWindowOnload) {
+                   currentWindowOnload();
+               }
+               execJasmine();
+           };
+
+            function execJasmine() {
+                jasmineEnv.execute();
+            }
+
+
+        }());
+
+
+    </script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>

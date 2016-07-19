@@ -1,0 +1,47 @@
+﻿
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Edit {{EditedPerson.Name}} {{EditedPerson.Surname}}
+    </div>
+    <div class="panel-body">
+        <form role="form" novalidate angular-validator name="updatePerson()">
+            <div class="">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label class="control-label" for="Name">First Name</label>
+                            <input type="text" class="form-control" ng-model="EditedPerson.Name" name="Name" id="Name" placeholder="First Name"
+                                   validate-on="blur" required required-message="'First Name is required'">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label class="control-label" for="SurName">Surname Name</label>
+                            <input type="text" class="form-control" ng-model="EditedPerson.Surname" name="Surname" id="SurName" placeholder="Last Name"
+                                   validate-on="blur" required required-message="'Last Name is required'">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label class="control-label" for="Phone">Phone</label>
+                            <input type="text" class="form-control" ng-model="EditedPerson.Phone" name="Phone" id="Phone" placeholder="Phone"
+                                   validate-on="blur" required required-message="'Phone is required'">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </form>
+    </div>
+    <div class="panel-footer clearfix">
+        <div class="pull-right">
+            <button type="button" class="btn btn-danger" ng-click="cancelEdit()">Cancel</button>
+            <button type="button" class="btn btn-primary" ng-click="updatePerson()">Update</button>
+        </div>
+    </div>
+</div>
